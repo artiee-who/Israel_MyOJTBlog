@@ -3,16 +3,16 @@ export const getBlogPostById = (id: number) => {
     {
       id: 1,
       image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&h=800&fit=crop",
-      category: "Web Development",
-      title: "Building Scalable React Applications in 2024",
+      category: "Orientation",
+      title: "1st Week of Internship",
       excerpt:
         "Learn the best practices and patterns for creating maintainable and scalable React applications with modern tools and techniques.",
-      date: "Dec 10, 2024",
+      date: "Dec 09-12, 2025",
       readTime: "8 min read",
       author: {
-        name: "Your Name",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-        bio: "Full-stack developer and tech blogger with 5+ years of experience.",
+        name: "Art Jade T. Israel",
+        avatar: "/IMG_8554.jpg",
+        bio: "BSIT Student | Creative Thinker | Aspiring IT Professional | Intern at DPWH",
       },
       content: {
         sections: [
@@ -26,7 +26,8 @@ export const getBlogPostById = (id: number) => {
           },
           {
             id: "component-architecture",
-            heading: "Component Architecture Best Practices",
+            heading: "Tuesday",
+            date: "December 9, 2025",
             paragraphs: [
               "One of the most critical aspects of building scalable React applications is establishing a solid component architecture. The key is to create small, reusable components that follow the `Single Responsibility Principle`. Each component should do one thing and do it well.",
               "Consider using a `container/presentational` pattern where you separate your business logic from your UI components. Container components handle data fetching and state management, while presentational components focus solely on rendering the UI based on the props they receive.",
@@ -63,7 +64,8 @@ export function UserCardContainer({ userId }: { userId: string }) {
           },
           {
             id: "state-management",
-            heading: "Modern State Management Strategies",
+            heading: "Wednesday",
+            date: "December 10, 2025",
             paragraphs: [
               "State management is often one of the most challenging aspects of building React applications. While `Redux` was the go-to solution for years, modern React provides several alternatives that might be more suitable for your use case.",
               "Consider using React's built-in `Context API` combined with `useReducer` for simpler applications, or explore solutions like `Zustand` or `Jotai` for a more lightweight approach. For server state, tools like `React Query` or `SWR` can significantly simplify your data fetching logic.",
@@ -100,7 +102,37 @@ function Profile() {
           },
           {
             id: "performance-optimization",
-            heading: "Performance Optimization Techniques",
+            heading: "Thursday",
+            date: "December 11, 2025",
+            paragraphs: [
+              "Performance is crucial for user experience. Start by using React's built-in optimization tools like `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders. However, remember that premature optimization can lead to more complex code without significant benefits.",
+              "Implement code splitting using `React.lazy` and `Suspense` to reduce your initial bundle size. This is especially important for large applications where loading everything upfront can significantly impact your Time to Interactive (TTI) metrics.",
+              "Monitor your application's performance using Chrome DevTools and React DevTools Profiler. Identify bottlenecks and optimize them systematically. Remember: measure first, then optimize based on real data, not assumptions.",
+            ],
+            codeBlock: {
+              language: "typescript",
+              code: `// Code splitting example
+import { lazy, Suspense } from 'react';
+
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Profile = lazy(() => import('./pages/Profile'));
+
+function App() {
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Suspense>
+  );
+}`,
+            },
+          },
+          {
+            id: "friday",
+            heading: "Friday",
+            date: "December 12, 2025",
             paragraphs: [
               "Performance is crucial for user experience. Start by using React's built-in optimization tools like `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders. However, remember that premature optimization can lead to more complex code without significant benefits.",
               "Implement code splitting using `React.lazy` and `Suspense` to reduce your initial bundle size. This is especially important for large applications where loading everything upfront can significantly impact your Time to Interactive (TTI) metrics.",
@@ -128,7 +160,7 @@ function App() {
           },
           {
             id: "testing-strategies",
-            heading: "Comprehensive Testing Strategies",
+            heading: "Summary",
             paragraphs: [
               "A scalable application needs a solid testing strategy. Implement a testing pyramid: lots of unit tests, some integration tests, and a few end-to-end tests. Use `Jest` and `React Testing Library` for unit and integration tests, and tools like `Playwright` or `Cypress` for E2E testing.",
               "Focus on testing user behavior rather than implementation details. Your tests should verify that your application works correctly from the user's perspective, not that it uses specific internal methods or state structures.",

@@ -4,51 +4,51 @@ export function Achievements() {
   const achievements = [
     {
       icon: Trophy,
-      title: "Best Capstone Project Award",
+      title: "Top 5 Performer | Research Festival",
       category: "Academic Excellence",
-      year: "2019",
+      year: "2025",
       description:
-        "Recognized for outstanding final year project on machine learning applications in healthcare.",
+        "Recognized as Top 5 in the College Research Festival - showcasing my team's research skills and dedication to academic excellence.",
     },
     {
       icon: Award,
-      title: "Hackathon Winner",
-      category: "Innovation",
-      year: "2018",
+      title: "PEPT Passer",
+      category: "Academic Excellence",
+      year: "2020",
       description:
-        "First place in 48-hour coding challenge, developing an AI-powered productivity tool.",
+        "Recognized as a Philippine Educational Placement Test (PEPT) Passer, allowing me to accelerate directly to Grade 11 and continue my studies ahead of schedule.",
     },
     {
       icon: Star,
-      title: "Dean's List",
-      category: "Academic Achievement",
-      year: "2016-2019",
+      title: "BE Scholarship",
+      category: "Academic Scholarship",
+      year: "2022 - 2026",
       description:
-        "Maintained GPA above 3.8 for three consecutive years, earning Dean's List honors.",
+        "After successfully taking the entrance exam, I was granted this opportunity in recognition of my academic performance and potential.",
     },
     {
       icon: Medal,
-      title: "Open Source Contributor",
-      category: "Community",
-      year: "2018-Present",
+      title: "School Representative",
+      category: "Leadership",
+      year: "2022",
       description:
-        "Active contributor to popular open-source projects with 500+ merged pull requests.",
+        "Actively involve in a departmental organization officers",
     },
     {
       icon: Target,
-      title: "Coding Competition",
-      category: "Technical Skills",
-      year: "2017",
+      title: "ROTC Officer | Adjutant",
+      category: "Extra Curricular",
+      year: "2025",
       description:
-        "Second place in regional programming competition with 200+ participants.",
+        "Recognized as ROTC Officer Adjutant - serving in a leadership role and assisting in organizing training, events, and administrative tasks, developing discipline and teamwork skills.",
     },
     {
       icon: Zap,
-      title: "Innovation Award",
-      category: "Leadership",
+      title: "RSCT & ARAPT",
+      category: "Extra Curricular",
       year: "2020",
       description:
-        "Recognized for implementing automated testing system that improved team productivity by 40%.",
+        "Honed technical and practical skills in preparation for regional competitions and strengthened research and analytical skills through focused academic projects.",
     },
   ];
 

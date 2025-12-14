@@ -10,30 +10,30 @@ export function Blog({ onPostClick }: BlogProps) {
       id: 1,
       image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop",
       category: "Web Development",
-      title: "Building Scalable React Applications in 2024",
+      title: "1st Week of Internship",
       excerpt:
         "Learn the best practices and patterns for creating maintainable and scalable React applications with modern tools and techniques.",
-      date: "Dec 10, 2024",
+      date: "Dec. 09-12, 2025",
       readTime: "8 min read",
     },
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
       category: "Tutorial",
-      title: "Mastering TypeScript: Advanced Types and Patterns",
+      title: "2nd Week of Internship",
       excerpt:
         "Dive deep into TypeScript's advanced type system and learn how to leverage it for better code quality and developer experience.",
-      date: "Dec 5, 2024",
+      date: "Dec. 15-19, 2025",
       readTime: "10 min read",
     },
     {
       id: 3,
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
       category: "Career",
-      title: "From Junior to Senior Developer: My Journey",
+      title: "3rd Week of Internship",
       excerpt:
         "Reflections on my growth as a software developer and the key lessons learned along the way to becoming a senior developer.",
-      date: "Nov 28, 2024",
+      date: "Dec. 22-26, 2025",
       readTime: "6 min read",
     },
   ];
@@ -43,7 +43,7 @@ export function Blog({ onPostClick }: BlogProps) {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 text-[#F3F4F7]">
-            Latest <span className="text-[#B5E3FF]">Blog Posts</span>
+            Internship Blog <span className="text-[#B5E3FF]">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-[#B5E3FF] mx-auto rounded-full"></div>
         </div>

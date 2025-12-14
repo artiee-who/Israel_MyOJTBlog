@@ -33,7 +33,7 @@ export function Navigation() {
               onClick={() => scrollToSection("home")}
               className="text-[#F3F4F7] hover:text-[#B5E3FF] transition-colors"
             >
-              <span className="text-xl">Portfolio</span>
+              <span className="text-xl">My College Journey</span>
             </button>
           </div>
 

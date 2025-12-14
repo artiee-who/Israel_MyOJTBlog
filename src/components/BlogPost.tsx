@@ -20,6 +20,7 @@ interface BlogPostProps {
       sections: Array<{
         id: string;
         heading: string;
+        date?: string;
         paragraphs: string[];
         codeBlock?: {
           language: string;
@@ -135,7 +136,7 @@ export function BlogPost({ onBack, post }: BlogPostProps) {
               {/* Author Section */}
               <div className="flex items-center gap-4 p-6 bg-[#1A1F35] rounded-lg border border-[#C7CCD9]/20">
                 <img
-                  src={post.author.avatar}
+                  src={post.author.avatar.startsWith('http') ? post.author.avatar : `${import.meta.env.BASE_URL}${post.author.avatar.replace(/^\//, '')}`}
                   alt={post.author.name}
                   className="w-16 h-16 rounded-full border-2 border-[#B5E3FF]/30"
                 />
@@ -155,9 +156,12 @@ export function BlogPost({ onBack, post }: BlogPostProps) {
               {post.content.sections.map((section) => (
                 <div key={section.id} id={section.id} className="mb-16 scroll-mt-24">
                   {/* Section Heading */}
-                  <h2 className="text-2xl sm:text-3xl text-[#F3F4F7] mb-6 pb-3 border-b border-[#C7CCD9]/20">
+                  <h2 className="text-2xl sm:text-3xl text-[#F3F4F7] mb-2 pb-3 border-b border-[#C7CCD9]/20">
                     {section.heading}
                   </h2>
+                  {section.date && (
+                    <p className="text-[#B5E3FF] text-sm mb-6">{section.date}</p>
+                  )}
 
                   {/* Paragraphs */}
                   {section.paragraphs.map((paragraph, idx) => (
@@ -249,7 +253,7 @@ export function BlogPost({ onBack, post }: BlogPostProps) {
                       <span>Previous Post</span>
                     </div>
                     <h4 className="text-[#F3F4F7] group-hover:text-[#B5E3FF] transition-colors">
-                      Understanding React Hooks
+                      Back to Home
                     </h4>
                   </button>
 
@@ -263,7 +267,7 @@ export function BlogPost({ onBack, post }: BlogPostProps) {
                       <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
                     </div>
                     <h4 className="text-[#F3F4F7] group-hover:text-[#B5E3FF] transition-colors">
-                      Advanced CSS Techniques
+                      2nd Week
                     </h4>
                   </button>
                 </div>
@@ -273,7 +277,7 @@ export function BlogPost({ onBack, post }: BlogPostProps) {
               <div className="bg-[#1A1F35] p-8 rounded-lg border border-[#C7CCD9]/20">
                 <div className="flex items-start gap-4 mb-4">
                   <img
-                    src={post.author.avatar}
+                    src={post.author.avatar.startsWith('http') ? post.author.avatar : `${import.meta.env.BASE_URL}${post.author.avatar.replace(/^\//, '')}`}
                     alt={post.author.name}
                     className="w-20 h-20 rounded-full border-2 border-[#B5E3FF]/30"
                   />

@@ -45,16 +45,12 @@ export function Hero() {
 
           {/* Tagline */}
           <p className="text-xl sm:text-2xl md:text-3xl mb-8 text-[#C7CCD9] max-w-3xl mx-auto">
-            A passionate{" "}
-            <span className="text-[#B5E3FF]">developer</span> crafting{" "}
-            <span className="text-[#B5E3FF]">elegant solutions</span> to complex
-            problems
+            "Growth begins the moment you listen to yourself."
           </p>
 
           {/* Description */}
           <p className="text-[#C7CCD9] mb-12 max-w-2xl mx-auto">
-            I specialize in building modern web applications with cutting-edge
-            technologies. Let's create something amazing together.
+            This blog is my personal space where I share my college journey, the exciting milestones, the challenges, and everything in between. A big part of this journey has been my internship at the Department of Public Works and Highways (DPWH), where I'm learning firsthand what it's like to step into the professional world. Here, I document real experiences, honest reflections, and valuable lessons from both the classroom and the workplace. Nothing too perfect, just genuine moments that shape who I am and who I'm becoming.
           </p>
 
           {/* CTA Buttons */}

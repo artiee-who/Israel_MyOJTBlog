@@ -4,54 +4,55 @@ export function Timeline() {
   const timelineData = [
     {
       year: "1st Year",
-      period: "2015-2016",
-      title: "Foundation & Discovery",
-      image: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=600&h=400&fit=crop",
+      period: "2022 - 2023",
+      title: "Exploring and Learning",
+      image: `${import.meta.env.BASE_URL}1st year.jpeg`,
       description:
-        "Started my journey in Computer Science. Learned programming fundamentals with Python and Java. Joined the coding club and participated in my first hackathon.",
+        "I started my journey as a first-year BSIT student, diving into the fundamentals of information technology while exploring my interests and discovering new skills. This year was all about building a strong foundation and getting a glimpse of the professional world I'm preparing for.",
       highlights: [
         { icon: Code, text: "First programming course" },
-        { icon: Users, text: "Joined coding club" },
-        { icon: Trophy, text: "First hackathon participation" },
+        { icon: Users, text: "Joined HIDUHA Musica Club" },
+        { icon: Trophy, text: "Comical Skit Champion" },
+        { icon: Trophy, text: "Champion in Art Exhibit" },
       ],
     },
     {
       year: "2nd Year",
-      period: "2016-2017",
-      title: "Building Skills",
-      image: "https://images.unsplash.com/photo-1638029202288-451a89e0d55f?w=600&h=400&fit=crop",
+      period: "2023 - 2024",
+      title: "Knowledge to Practice",
+      image: `${import.meta.env.BASE_URL}2nd year.JPG`,
       description:
-        "Deepened my knowledge in data structures and algorithms. Built my first full-stack web application. Won second place in university coding competition.",
+        "In my second year of BSIT, I focused on applying the knowledge I gained in my first year to real-world scenarios. I worked on more challenging courses and hands-on projects that strengthened my skills, encouraged collaboration, and helped me solve practical problems. This year was all about turning theory into practice and preparing for bigger opportunities ahead, including my internship.",
       highlights: [
-        { icon: Code, text: "First full-stack project" },
-        { icon: Trophy, text: "2nd place coding competition" },
-        { icon: Users, text: "Study group leader" },
+        { icon: Code, text: "First Client with OOP" },
+        { icon: Users, text: "Joined ROTC Officer" },
+        { icon: Trophy, text: "Tactical Champion in ROTC" },
       ],
     },
     {
       year: "3rd Year",
-      period: "2017-2018",
-      title: "Professional Growth",
-      image: "https://images.unsplash.com/photo-1611764461465-09162da6465a?w=600&h=400&fit=crop",
+      period: "2024 -2025",
+      title: "Stepping Forward",
+      image: `${import.meta.env.BASE_URL}3rd year.JPG`,
       description:
-        "Completed summer internship at a tech startup. Worked on real-world projects using React and Node.js. Started contributing to open-source projects.",
+        "In my third year of BSIT, I took on more complex projects and began exploring specialized areas in technology. This year was about stepping forward, expanding my skills, collaborating on team projects, and tackling challenges that pushed me to think critically and creatively. It was also the time I prepared more seriously for real-world experiences, including my upcoming internship, building confidence in both my technical and professional abilities.",
       highlights: [
-        { icon: Code, text: "Summer internship" },
-        { icon: Trophy, text: "Open-source contributor" },
+        { icon: Code, text: "Capstone Project Proposal" },
+        { icon: Trophy, text: "Capstone 1 Defended" },
         { icon: Users, text: "Mentored juniors" },
       ],
     },
     {
       year: "4th Year",
-      period: "2018-2019",
-      title: "Achievement & Launch",
+      period: "2025 - 2026",
+      title: "Internship",
       image: "https://images.unsplash.com/photo-1623461487986-9400110de28e?w=600&h=400&fit=crop",
       description:
-        "Graduated with honors. Completed capstone project on machine learning. Received job offer and started my career as a full-stack developer.",
+        "In my fourth year of BSIT, I fully stepped into the professional world through my internship at the Department of Public Works and Highways (DPWH). This experience allowed me to apply the skills and knowledge I developed over the past years to real-world tasks and challenges. It was a year of growth, hands-on learning, and gaining insight into the professional environment, preparing me for my future career while reflecting on everything I've learned throughout college.",
       highlights: [
-        { icon: Trophy, text: "Graduated with honors" },
-        { icon: Code, text: "ML capstone project" },
-        { icon: Users, text: "First developer job" },
+        { icon: Trophy, text: "Top 5 Research Festival" },
+        { icon: Code, text: "Capstone Project Deployment" },
+        { icon: Users, text: "Internship at DPWH" },
       ],
     },
   ];
@@ -61,7 +62,7 @@ export function Timeline() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 text-[#F3F4F7]">
-            My <span className="text-[#B5E3FF]">Journey</span>
+            My College <span className="text-[#B5E3FF]">Journey</span>
           </h2>
           <div className="w-20 h-1 bg-[#B5E3FF] mx-auto rounded-full"></div>
         </div>
@@ -146,12 +147,12 @@ export function Timeline() {
                   <span className="text-[#B5E3FF] text-sm">{item.period}</span>
                 </div>
                 <h3 className="text-xl text-[#F3F4F7] mb-2">{item.year} - {item.title}</h3>
+                <p className="text-[#C7CCD9] text-sm mb-4">{item.description}</p>
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-48 object-cover rounded-lg mb-4 border border-[#C7CCD9]/20"
                 />
-                <p className="text-[#C7CCD9] text-sm mb-4">{item.description}</p>
                 <div className="space-y-2">
                   {item.highlights.map((highlight, idx) => {
                     const Icon = highlight.icon;
