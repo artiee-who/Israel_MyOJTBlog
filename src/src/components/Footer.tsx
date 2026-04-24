@@ -142,7 +142,7 @@ export function Footer() {
         <div className="pt-8 border-t border-[#C7CCD9]/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#C7CCD9] text-sm">
-              © 2024 Your Name. All rights reserved.
+              © 2026 Art Jade Israel💖. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors">
