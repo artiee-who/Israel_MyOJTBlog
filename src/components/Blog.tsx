@@ -8,7 +8,7 @@ export function Blog({ onPostClick }: BlogProps) {
   const blogPosts = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}cc4806db-5065-4e0c-8019-15f35734bcd6.jfif`,
+      image: `cc4806db-5065-4e0c-8019-15f35734bcd6.jpg`,
       category: "Web Development",
       title: "1st Month of Internship",
       excerpt:
