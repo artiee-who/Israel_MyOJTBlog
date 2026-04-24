@@ -2,7 +2,7 @@ export const getBlogPostById = (id: number) => {
   const posts = [
     {
       id: 1,
-      image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jfif",
+      image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jpg",
       category: "Orientation",
       title: "1st Month of Internship",
       excerpt:
@@ -33,7 +33,7 @@ export const getBlogPostById = (id: number) => {
               "During my first week of the internship, I felt nervous as I was still adjusting to the new environment and unfamiliar tasks. I was assigned to assist with basic office work, particularly using Microsoft Excel to organize and update employee data, including Personal Data Sheets (PDS). Although I initially found the tasks challenging, I gradually became more comfortable as I learned how to manage spreadsheets, encode accurate information, and follow proper formatting.",
               "I also helped in sorting and reviewing documents, ensuring that employee records were complete and properly filed. Through the guidance of my supervisors and staff, I was able to improve my attention to detail and gain confidence in handling administrative tasks. This experience helped me become more adaptable, responsible, and prepared for more complex assignments in the following weeks.",
             ],
-            image: "/10217da4-a0ed-41e9-9ee3-854fa352a931.jfif",
+            image: "/10217da4-a0ed-41e9-9ee3-854fa352a931.jpg",
             imageAlt: "First week internship photo",
           },
           {
@@ -44,7 +44,7 @@ export const getBlogPostById = (id: number) => {
               "During my second week of the internship, the workload was relatively light as the office was preparing for the upcoming Christmas party. Most of the activities focused on event preparation, and I had the opportunity to assist in organizing materials and supporting the team with various tasks related to the celebration.",
               "Although there were fewer technical assignments during this time, the experience allowed me to interact more with the staff, observe workplace collaboration, and participate in a positive and engaging office environment. It also helped me feel more comfortable and build better relationships with my co-workers.",
             ],
-            image: "/be0fbab4-b413-46f2-903c-5b8b4f011f43.jfif",
+            image: "/be0fbab4-b413-46f2-903c-5b8b4f011f43.jpg",
             imageAlt: "Second week internship photo",
           },
           {
@@ -55,7 +55,7 @@ export const getBlogPostById = (id: number) => {
               "During the third week of my internship, I was assigned various administrative and field-related tasks. I assisted in delivering and receiving documents across different sections, ensuring proper coordination and timely submission. I also helped in printing and organizing files, as well as editing and updating some Personal Data Sheet (PDS) documents to maintain accurate employee records.",
               "In addition, I participated in Lakbay Alalay, where we conducted road inspections to assess their condition. We checked for areas that required repair or possible demolition, which gave me practical exposure to fieldwork and a better understanding of the agency's role in maintaining public infrastructure. This experience helped me develop both my organizational and observational skills.",
             ],
-            image: "/754b30e2-1a3a-42fb-891c-79999db260d6.jfif",
+            image: "/754b30e2-1a3a-42fb-891c-79999db260d6.jpg",
             imageAlt: "Third week internship photo",
           },
           {
@@ -101,7 +101,7 @@ export const getBlogPostById = (id: number) => {
     },
     {
       id: 2,
-      image: "/b1b65e38-ded2-4653-8679-93fd54504304.jfif",
+      image: "/b1b65e38-ded2-4653-8679-93fd54504304.jpg",
       category: "Collaboration",
       title: "2nd Month of Internship",
       excerpt:
@@ -132,7 +132,7 @@ export const getBlogPostById = (id: number) => {
               "During the first week of my second month of internship, I was assigned to various administrative and technical support tasks. I assisted in organizing Personal Data Sheet (PDS) documents and delivered them to different section offices to ensure proper distribution and processing. I also helped in securing signatures for important documents and ensuring their completeness.",
               "In addition, I assisted in basic networking tasks within the office and helped troubleshoot and fix defective computer units. I also updated some PDS information to ensure accuracy of employee records. Furthermore, I was tasked with cutting and preparing documents for proper filing and distribution. This week helped me further develop my organizational skills and basic technical troubleshooting abilities.",
             ],
-            image: "/ad49c15e-a0c5-482a-abc5-4b60f99da5ec.jfif",
+            image: "/ad49c15e-a0c5-482a-abc5-4b60f99da5ec.jpg",
             imageAlt: "Second month first week internship photo",
           },
           {
@@ -143,7 +143,7 @@ export const getBlogPostById = (id: number) => {
               "During the second week of my internship, we went to a law firm to have our Memorandum of Agreement (MOA) notarized as part of the required internship documentation process. This ensured that all formal agreements were properly validated and legally acknowledged.",
               "In addition, I assisted in submitting various documents to different officers within the office, ensuring proper routing and completeness of requirements. I also helped in forwarding Personal Data Sheet (PDS) documents to the Human Resource (HR) and Bids and Awards Committee (BAC) offices for further processing and record-keeping. This week enhanced my understanding of official document handling and inter-office coordination.",
             ],
-            image: "/b3e9fb4b-cc5c-4865-89b9-1f5225522250.jfif",
+            image: "/b3e9fb4b-cc5c-4865-89b9-1f5225522250.jpg",
             imageAlt: "Second month second week internship photo",
           },
           {
@@ -155,7 +155,7 @@ export const getBlogPostById = (id: number) => {
               "I also participated in discussions with my team regarding the system's features, flow, and overall design to ensure that everyone was aligned with the project goals. These collaborative meetings helped us organize our ideas and plan the development process more effectively.",
               "In addition, after attending our assembly meeting at school, we proceeded directly to the DPWH office to continue our internship duties. This week helped strengthen my teamwork, planning, and UI design skills in preparation for the upcoming development phase.",
             ],
-            image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jfif",
+            image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jpg",
             imageAlt: "Second month third week internship photo",
           },
           {
@@ -167,7 +167,7 @@ export const getBlogPostById = (id: number) => {
               "I was also assigned to forward several documents to different section offices, ensuring proper distribution and coordination. In addition, I assisted in sorting documents from the Maintenance Office, organizing them for proper filing and record-keeping.",
               "Furthermore, I worked on our capstone manuscript by submitting it for international publication consideration and revising it for final submission. This involved reviewing content, making necessary corrections, and ensuring that the document met the required standards. This week helped me improve my organizational skills, attention to detail, and academic writing responsibility.",
             ],
-            image: "/b1b65e38-ded2-4653-8679-93fd54504304.jfif",
+            image: "/b1b65e38-ded2-4653-8679-93fd54504304.jpg",
             imageAlt: "Second month fourth week internship photo",
           },
           {
@@ -218,7 +218,7 @@ export const getBlogPostById = (id: number) => {
     },
     {
       id: 3,
-      image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jfif",
+      image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jpg",
       category: "Development",
       title: "3rd Month of Internship",
       excerpt:
@@ -250,7 +250,7 @@ export const getBlogPostById = (id: number) => {
               "I consulted with our handler to gather necessary information needed for the development of the IPCR System that our team is working on. This helped us better understand the system requirements and expected outputs.",
               "In addition, I assisted in troubleshooting a printer at the Admin Office, ensuring it was functioning properly for office use. I also helped in delivering documents to different offices, which improved my understanding of proper document flow and coordination within the organization.",
             ],
-            image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jfif",
+            image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jpg",
             imageAlt: "Third month first week internship photo",
           },
           {
@@ -262,7 +262,7 @@ export const getBlogPostById = (id: number) => {
               "I also helped in updating documents by writing and completing required dates to ensure accuracy and completeness of records. In addition, I was assigned to assist at the COA Office where I replaced an RJ45 network cable. This task required me to climb to the roof to properly install and secure the internet connection, giving me hands-on experience in basic networking and hardware installation.",
               "Overall, this week enhanced my attention to detail, responsibility in handling official documents, and practical skills in technical troubleshooting.",
             ],
-            image: "/175c711a-72ab-4ecb-b4ce-44af71d0a083.jfif",
+            image: "/175c711a-72ab-4ecb-b4ce-44af71d0a083.jpg",
             imageAlt: "Third month second week internship photo",
           },
           {
@@ -274,7 +274,7 @@ export const getBlogPostById = (id: number) => {
               "In addition, I was assigned to assist in fixing a computer at the Maintenance Office. I performed basic troubleshooting to identify and resolve issues affecting the system's performance. This experience further developed my technical skills in diagnosing and addressing common computer problems.",
               "Overall, this week helped improve my communication skills through the promotional activity and strengthened my practical knowledge in computer troubleshooting.",
             ],
-            image: "/cfa94498-19e5-4e21-8b3d-646835f850df.jfif",
+            image: "/cfa94498-19e5-4e21-8b3d-646835f850df.jpg",
             imageAlt: "Third month third week internship photo",
           },
           {
@@ -286,7 +286,7 @@ export const getBlogPostById = (id: number) => {
               "In addition, I participated in the presentation of the system we are developing at the Planning Office for consultation. This allowed us to gather feedback and identify the necessary requirements and improvements needed for the system to better meet user needs.",
               "Overall, these tasks helped me improve my coordination skills in document handling and enhanced my understanding of system development through stakeholder consultation.",
             ],
-            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jfif",
+            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jpg",
             imageAlt: "Third month fourth week internship photo",
           },
           {
@@ -338,7 +338,7 @@ export const getBlogPostById = (id: number) => {
     },
     {
       id: 4,
-      image: "/60ca191d-73e8-4761-99f7-aa8a1dac586d.jfif",
+      image: "/60ca191d-73e8-4761-99f7-aa8a1dac586d.jpg",
       category: "Implementation",
       title: "4th Month of Internship",
       excerpt:
@@ -370,7 +370,7 @@ export const getBlogPostById = (id: number) => {
               "I also collaborated closely with my team in testing different parts of the system, identifying errors, and suggesting possible improvements to enhance its functionality and user experience. As part of my role in System Quality Assurance, I checked whether the system met the client's requirements and standards.",
               "In addition, I continued assisting in document-related tasks when needed, supporting office operations while balancing system development responsibilities. This week helped me further strengthen my attention to detail, teamwork, and system evaluation skills.",
             ],
-            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jfif",
+            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jpg",
             imageAlt: "Fourth month first week internship photo",
           },
           {
@@ -381,7 +381,7 @@ export const getBlogPostById = (id: number) => {
               "I collaborated with my team in identifying bugs and system issues, as well as verifying corrections and improvements made by the developers. As part of my role in System Quality Assurance, I carefully checked the system's performance, usability, and accuracy to ensure its readiness for implementation.",
               "In addition, I assisted with minor administrative tasks when needed, which helped maintain smooth office operations. This week further enhanced my analytical skills, attention to detail, and understanding of the importance of thorough system testing before deployment.",
             ],
-            image: "/3bbdc503-aab6-4378-a526-60c86b864c98.jfif",
+            image: "/3bbdc503-aab6-4378-a526-60c86b864c98.jpg",
             imageAlt: "Fourth month second week internship photo",
           },
           {
@@ -393,7 +393,7 @@ export const getBlogPostById = (id: number) => {
               "As part of my role in System Quality Assurance, I conducted final testing to verify that all system requirements were properly met. I checked for errors, inconsistencies, and usability issues, and ensured that necessary corrections were applied by the development team.",
               "I also collaborated closely with my teammates during final reviews and system evaluations to ensure that the output aligned with the client's expectations. This week strengthened my attention to detail, critical thinking, and understanding of the importance of thorough quality assurance before system deployment.",
             ],
-            image: "/1528af83-1fec-4824-ac63-47cce6677242.jfif",
+            image: "/1528af83-1fec-4824-ac63-47cce6677242.jpg",
             imageAlt: "Fourth month third week internship photo",
           },
           {
@@ -404,7 +404,7 @@ export const getBlogPostById = (id: number) => {
               "As part of the preparation, I collaborated with my team in reviewing the system to ensure that all features were properly working and aligned with the client's requirements. I also participated in rehearsals and preparations for the turnover presentation, which aimed to demonstrate the system's functionality and overall output.",
               "In addition, this week marked the completion of my On-the-Job Training (OJT). It was a meaningful experience that allowed me to apply the knowledge and skills I gained throughout the internship. Overall, this final week strengthened my confidence, teamwork, and understanding of system development from planning to deployment.",
             ],
-            image: "/ce45f2eb-54e0-449a-bc91-c42194193d22.jfif",
+            image: "/ce45f2eb-54e0-449a-bc91-c42194193d22.jpg",
             imageAlt: "Fourth month fourth week internship photo",
           },
         ],
