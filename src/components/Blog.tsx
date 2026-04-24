@@ -8,7 +8,7 @@ export function Blog({ onPostClick }: BlogProps) {
   const blogPosts = [
     {
       id: 1,
-      image: getImagePath("/cc4806db-5065-4e0c-8019-15f35734bcd6.jpg"),
+      image: `cc4806db-5065-4e0c-8019-15f35734bcd6.jpg`,
       category: "Web Development",
       title: "1st Month of Internship",
       excerpt:
@@ -18,7 +18,7 @@ export function Blog({ onPostClick }: BlogProps) {
     },
     {
       id: 2,
-      image: `${import.meta.env.BASE_URL}b1b65e38-ded2-4653-8679-93fd54504304.jfif`,
+      image: `b1b65e38-ded2-4653-8679-93fd54504304.jpg`,
       category: "Collaboration",
       title: "2nd Month of Internship",
       excerpt:
@@ -28,7 +28,7 @@ export function Blog({ onPostClick }: BlogProps) {
     },
     {
       id: 3,
-      image: `${import.meta.env.BASE_URL}b43335fd-3f02-40b3-8c51-661000b3609a.jfif`,
+      image: `/b43335fd-3f02-40b3-8c51-661000b3609a.jpg`,
       category: "Development",
       title: "3rd Month of Internship",
       excerpt:
@@ -38,7 +38,7 @@ export function Blog({ onPostClick }: BlogProps) {
     },
     {
       id: 4,
-      image: `${import.meta.env.BASE_URL}60ca191d-73e8-4761-99f7-aa8a1dac586d.jfif`,
+      image: `${import.meta.env.BASE_URL}60ca191d-73e8-4761-99f7-aa8a1dac586d.jpg`,
       category: "Implementation",
       title: "4th Month of Internship",
       excerpt:
