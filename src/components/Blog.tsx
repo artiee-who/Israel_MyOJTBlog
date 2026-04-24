@@ -28,7 +28,7 @@ export function Blog({ onPostClick }: BlogProps) {
     },
     {
       id: 3,
-      image: `/b43335fd-3f02-40b3-8c51-661000b3609a.jpg`,
+      image: `b43335fd-3f02-40b3-8c51-661000b3609a.jpg`,
       category: "Development",
       title: "3rd Month of Internship",
       excerpt:
