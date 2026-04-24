@@ -6,34 +6,34 @@ export function PhotoGallery() {
 
   const photos = [
     {
-      url: "https://images.unsplash.com/photo-1617634667039-8e4cb277ab46?w=800&h=600&fit=crop",
-      title: "Mountain Adventure",
-      category: "Nature",
+      url: `${import.meta.env.BASE_URL}photo1.jpg`,
+      title: "Gallery Photo 1",
+      category: "Memories",
     },
     {
-      url: "https://images.unsplash.com/photo-1493134799591-2c9eed26201a?w=800&h=600&fit=crop",
-      title: "City Lights",
-      category: "Urban",
+      url: `${import.meta.env.BASE_URL}photo2.jpg`,
+      title: "Gallery Photo 2",
+      category: "Memories",
     },
     {
-      url: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&h=600&fit=crop",
-      title: "Coffee Culture",
-      category: "Lifestyle",
+      url: `${import.meta.env.BASE_URL}photo3.jpg`,
+      title: "Gallery Photo 3",
+      category: "Memories",
     },
     {
-      url: "https://images.unsplash.com/photo-1578592391689-0e3d1a1b52b9?w=800&h=600&fit=crop",
-      title: "Hiking Trails",
-      category: "Adventure",
+      url: `${import.meta.env.BASE_URL}photo4.jpg`,
+      title: "Gallery Photo 4",
+      category: "Memories",
     },
     {
-      url: "https://images.unsplash.com/photo-1623715537851-8bc15aa8c145?w=800&h=600&fit=crop",
-      title: "Tech Setup",
-      category: "Work",
+      url: `${import.meta.env.BASE_URL}photo5.jpg`,
+      title: "Gallery Photo 5",
+      category: "Memories",
     },
     {
-      url: "https://images.unsplash.com/photo-1647962431451-d0fdaf1cf21c?w=800&h=600&fit=crop",
-      title: "Beach Vibes",
-      category: "Travel",
+      url: `${import.meta.env.BASE_URL}photo6.jpg`,
+      title: "Gallery Photo 6",
+      category: "Memories",
     },
   ];
 
@@ -106,7 +106,7 @@ export function PhotoGallery() {
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#F3F4F7] hover:text-[#B5E3FF] transition-colors z-10"
+              className="absolute top-4 right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors z-10"
             >
               <X size={24} />
             </button>
@@ -117,7 +117,7 @@ export function PhotoGallery() {
                 e.stopPropagation();
                 goToPrevious();
               }}
-              className="absolute left-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#F3F4F7] hover:text-[#B5E3FF] transition-colors"
+              className="absolute left-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors"
             >
               <ChevronLeft size={24} />
             </button>
@@ -128,7 +128,7 @@ export function PhotoGallery() {
                 e.stopPropagation();
                 goToNext();
               }}
-              className="absolute right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#F3F4F7] hover:text-[#B5E3FF] transition-colors"
+              className="absolute right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors"
             >
               <ChevronRight size={24} />
             </button>
