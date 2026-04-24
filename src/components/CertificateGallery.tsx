@@ -6,40 +6,40 @@ export function CertificateGallery() {
 
   const certificates = [
     {
-      url: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&h=600&fit=crop",
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Project System Deployment",
+      issuer: "Saint Columban College",
+      date: "2026",
     },
     {
-      url: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      title: "React Advanced Certification",
-      issuer: "Meta Blueprint",
-      date: "2022",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Workflow Automation Certified",
+      issuer: "Saint Columban College",
+      date: "2026",
     },
     {
-      url: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&h=600&fit=crop",
-      title: "Google Cloud Professional",
-      issuer: "Google Cloud",
-      date: "2022",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Workshop on Office Workplace Etiquette Certified",
+      issuer: "Saint Columban College",
+      date: "2026",
     },
     {
-      url: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      title: "Full Stack Web Development",
-      issuer: "Coursera",
-      date: "2021",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Top 4 Research Festival",
+      issuer: "Saint Columban College",
+      date: "2025",
     },
     {
-      url: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&h=600&fit=crop",
-      title: "Machine Learning Specialization",
-      issuer: "Stanford Online",
-      date: "2021",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Digital Career Expo (DCE) Certificate",
+      issuer: "DICT | Pagadian City",
+      date: "2025",
     },
     {
-      url: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-      title: "Agile & Scrum Master",
-      issuer: "Scrum Alliance",
-      date: "2020",
+      url: `${import.meta.env.BASE_URL}certcover.png`,
+      title: "Java Data Structures Certified",
+      issuer: "CodeChum",
+      date: "2025",
     },
   ];
 
@@ -105,7 +105,7 @@ export function CertificateGallery() {
             {/* Close Button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#F3F4F7] hover:text-[#B5E3FF] transition-colors z-10"
+              className="absolute top-4 right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors z-10"
             >
               <X size={24} />
             </button>
