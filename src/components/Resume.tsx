@@ -3,9 +3,16 @@ import { Download, Briefcase, GraduationCap } from "lucide-react";
 export function Resume() {
   const experiences = [
     {
+      title: "System Project | System Quality Assurance",
+      company: "DPWH Pagadian City",
+      period: "2026 - Present",
+      description:
+        "Member of the team in the development and quality assurance of an internal system by assisting in requirement validation, conducting functional and usability testing, and identifying bugs or inconsistencies. Collaborated with the development team to ensure system reliability, accuracy, and compliance with project standards. Contributed to documenting test cases, reporting issues, and verifying fixes to improve overall system performance and user experience.",
+    },
+    {
       title: "Capstone Project | System Quality Assurance",
       company: "Saint Columban College",
-      period: "2025 - Present",
+      period: "2025 - 2026",
       description:
         "Ensures system quality by performing tests, identifying bugs, and validating features against requirements. Collaborates with developer and stakeholder on test planning, documentation, and execution. Provides feedback to improve performance and ensure a reliable, user-ready product.",
     },
@@ -78,7 +85,7 @@ export function Resume() {
     {
       degree: "Saint Columban College",
       school: "College Education",
-      period: "2020 - Present",
+      period: "2026 - Present",
       description:
         "I'm currently an intern at the Department of Public Works and Highways (DPWH), gaining hands-on experience and learning what it's like to work in a real professional environment. This opportunity allows me to apply what I've learned in school while developing new skills for my future career.",
     },

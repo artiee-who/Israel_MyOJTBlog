@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Send } from "lucide-react";
 import { useState } from "react";
 
 export function Footer() {
@@ -14,9 +14,13 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { icon: Github, url: "#", label: "GitHub" },
-    { icon: Linkedin, url: "#", label: "LinkedIn" },
-    { icon: Twitter, url: "#", label: "Twitter" },
+    { icon: Instagram, url: "https://www.instagram.com/artieewho/", label: "Instagram" },
+    { icon: Facebook, url: "https://www.facebook.com/artiee.who", label: "Facebook" },
+    {
+      icon: Linkedin,
+      url: "https://www.linkedin.com/in/art-jade-israel-70b2473a2?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+      label: "LinkedIn",
+    },
   ];
 
   return (
@@ -30,28 +34,28 @@ export function Footer() {
             </h3>
             <div className="space-y-4">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:artieewho@gmail.com"
                 className="flex items-center gap-3 text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors group"
               >
                 <div className="w-10 h-10 bg-[#1A1F35] rounded-lg flex items-center justify-center group-hover:bg-[#B5E3FF]/10 transition-colors">
                   <Mail className="text-[#B5E3FF]" size={20} />
                 </div>
-                <span>your.email@example.com</span>
+                <span>artieewho@gmail.com</span>
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+639762134983"
                 className="flex items-center gap-3 text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors group"
               >
                 <div className="w-10 h-10 bg-[#1A1F35] rounded-lg flex items-center justify-center group-hover:bg-[#B5E3FF]/10 transition-colors">
                   <Phone className="text-[#B5E3FF]" size={20} />
                 </div>
-                <span>+1 (234) 567-890</span>
+                <span>+63 976 213 4983</span>
               </a>
               <div className="flex items-center gap-3 text-[#C7CCD9]">
                 <div className="w-10 h-10 bg-[#1A1F35] rounded-lg flex items-center justify-center">
                   <MapPin className="text-[#B5E3FF]" size={20} />
                 </div>
-                <span>San Francisco, CA</span>
+                <span>Balintawak Aurora Zamboanga Del Sur</span>
               </div>
             </div>
 

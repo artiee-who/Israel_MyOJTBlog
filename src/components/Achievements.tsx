@@ -4,7 +4,7 @@ export function Achievements() {
   const achievements = [
     {
       icon: Trophy,
-      title: "Top 5 Performer | Research Festival",
+      title: "Top 4 | Research Fest",
       category: "Academic Excellence",
       year: "2025",
       description:
@@ -44,11 +44,35 @@ export function Achievements() {
     },
     {
       icon: Zap,
-      title: "RSCT & ARAPT",
+      title: "RSCT & ARAPT Training Certified",
       category: "Extra Curricular",
       year: "2020",
       description:
         "Honed technical and practical skills in preparation for regional competitions and strengthened research and analytical skills through focused academic projects.",
+    },
+    {
+      icon: Award,
+      title: "Deployed System Project | SCC Canteen",
+      category: "Academic",
+      year: "2025",
+      description:
+        "Successfully deployed the Food Reservation and Real-Time Availability Monitoring System for the Saint Columban College Canteen. This project provided hands-on experience in full system development and deployment and was recognized with a certificate of completion.",
+    },
+    {
+      icon: Award,
+      title: "Deployed System Project | DPWH",
+      category: "Academic",
+      year: "2026",
+      description:
+        "Successfully deployed the IPCR Management System for DPWH - 1st DEO Balangasan District, Pagadian City, Zamboanga del Sur. This project enhanced my experience in system development and strengthened my role as a System Quality Assurance. I also received a certificate and gained valuable hands-on experience in real-world system implementation.",
+    },
+    {
+      icon: Star,
+      title: "Saint Thomas Aquinas Award",
+      category: "Academic Award",
+      year: "2026",
+      description:
+        "Recognized for the internationally published manuscript and system project titled Food Reservation and Real-Time Availability Monitoring System for the Saint Columban College Canteen. This achievement highlights successful research, system development, and publication in an international platform.",
     },
   ];
 

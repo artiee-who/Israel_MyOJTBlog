@@ -2,12 +2,12 @@ export const getBlogPostById = (id: number) => {
   const posts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=1200&h=800&fit=crop",
+      image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jfif",
       category: "Orientation",
-      title: "1st Week of Internship",
+      title: "1st Month of Internship",
       excerpt:
         "Learn the best practices and patterns for creating maintainable and scalable React applications with modern tools and techniques.",
-      date: "Dec 09-12, 2025",
+      date: "December 2025",
       readTime: "8 min read",
       author: {
         name: "Art Jade T. Israel",
@@ -20,250 +20,427 @@ export const getBlogPostById = (id: number) => {
             id: "introduction",
             heading: "Introduction",
             paragraphs: [
-              "Building scalable React applications requires a deep understanding of both the framework and software architecture principles. In this comprehensive guide, we'll explore the essential patterns and practices that will help you create applications that can grow with your business needs.",
-              "Whether you're working on a small startup project or an enterprise-level application, the principles we'll discuss here will serve as a solid foundation for your React development journey. We'll cover everything from `component architecture` to `state management` and `performance optimization`.",
+              "During the first month of my internship, I was introduced to the organization's workflow, systems, and overall development environment. I took time to understand the structure of the office, the roles of each team member, and how different units collaborate to achieve project goals. I familiarized myself with the ongoing projects, as well as the tools, technologies, and quality assurance processes used by the team to ensure system efficiency and reliability.",
+              "As part of my initial tasks, I assisted in reviewing system requirements and observing how these requirements were translated into functional features. I closely monitored testing procedures, including how test cases were created and executed, and how issues or bugs were identified and documented. I also supported documentation efforts by organizing files, updating records, and ensuring that project-related information was properly recorded and accessible.",
+              "In addition, I participated in team discussions and meetings, which helped me gain insights into real-world problem-solving, project planning, and system improvement strategies. This experience allowed me to gradually adapt to the professional work environment, enhance my communication and technical skills, and develop a deeper understanding of system development and quality assurance practices. Overall, this first month served as a strong foundation for my continued involvement in more complex tasks throughout my internship.",
             ],
           },
           {
             id: "component-architecture",
-            heading: "Tuesday",
-            date: "December 9, 2025",
+            heading: "1st Week",
+            date: "December 9-12, 2025",
             paragraphs: [
-              "One of the most critical aspects of building scalable React applications is establishing a solid component architecture. The key is to create small, reusable components that follow the `Single Responsibility Principle`. Each component should do one thing and do it well.",
-              "Consider using a `container/presentational` pattern where you separate your business logic from your UI components. Container components handle data fetching and state management, while presentational components focus solely on rendering the UI based on the props they receive.",
+              "During my first week of the internship, I felt nervous as I was still adjusting to the new environment and unfamiliar tasks. I was assigned to assist with basic office work, particularly using Microsoft Excel to organize and update employee data, including Personal Data Sheets (PDS). Although I initially found the tasks challenging, I gradually became more comfortable as I learned how to manage spreadsheets, encode accurate information, and follow proper formatting.",
+              "I also helped in sorting and reviewing documents, ensuring that employee records were complete and properly filed. Through the guidance of my supervisors and staff, I was able to improve my attention to detail and gain confidence in handling administrative tasks. This experience helped me become more adaptable, responsible, and prepared for more complex assignments in the following weeks.",
             ],
-            codeBlock: {
-              language: "typescript",
-              code: `// Presentational Component
-interface UserCardProps {
-  name: string;
-  email: string;
-  avatar: string;
-}
-
-export function UserCard({ name, email, avatar }: UserCardProps) {
-  return (
-    <div className="user-card">
-      <img src={avatar} alt={name} />
-      <h3>{name}</h3>
-      <p>{email}</p>
-    </div>
-  );
-}
-
-// Container Component
-export function UserCardContainer({ userId }: { userId: string }) {
-  const { data, isLoading } = useUser(userId);
-  
-  if (isLoading) return <Spinner />;
-  if (!data) return <ErrorState />;
-  
-  return <UserCard {...data} />;
-}`,
-            },
+            image: "/10217da4-a0ed-41e9-9ee3-854fa352a931.jfif",
+            imageAlt: "First week internship photo",
           },
           {
             id: "state-management",
-            heading: "Wednesday",
-            date: "December 10, 2025",
+            heading: "2nd Week",
+            date: "December 15-19, 2025",
             paragraphs: [
-              "State management is often one of the most challenging aspects of building React applications. While `Redux` was the go-to solution for years, modern React provides several alternatives that might be more suitable for your use case.",
-              "Consider using React's built-in `Context API` combined with `useReducer` for simpler applications, or explore solutions like `Zustand` or `Jotai` for a more lightweight approach. For server state, tools like `React Query` or `SWR` can significantly simplify your data fetching logic.",
+              "During my second week of the internship, the workload was relatively light as the office was preparing for the upcoming Christmas party. Most of the activities focused on event preparation, and I had the opportunity to assist in organizing materials and supporting the team with various tasks related to the celebration.",
+              "Although there were fewer technical assignments during this time, the experience allowed me to interact more with the staff, observe workplace collaboration, and participate in a positive and engaging office environment. It also helped me feel more comfortable and build better relationships with my co-workers.",
             ],
-            codeBlock: {
-              language: "typescript",
-              code: `// Using Zustand for simple state management
-import create from 'zustand';
-
-interface UserStore {
-  user: User | null;
-  setUser: (user: User) => void;
-  logout: () => void;
-}
-
-export const useUserStore = create<UserStore>((set) => ({
-  user: null,
-  setUser: (user) => set({ user }),
-  logout: () => set({ user: null }),
-}));
-
-// Using in a component
-function Profile() {
-  const { user, logout } = useUserStore();
-  
-  return (
-    <div>
-      <h1>Welcome, {user?.name}</h1>
-      <button onClick={logout}>Logout</button>
-    </div>
-  );
-}`,
-            },
+            image: "/be0fbab4-b413-46f2-903c-5b8b4f011f43.jfif",
+            imageAlt: "Second week internship photo",
           },
           {
             id: "performance-optimization",
-            heading: "Thursday",
-            date: "December 11, 2025",
+            heading: "3rd Week",
+            date: "December 22-26, 2025",
             paragraphs: [
-              "Performance is crucial for user experience. Start by using React's built-in optimization tools like `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders. However, remember that premature optimization can lead to more complex code without significant benefits.",
-              "Implement code splitting using `React.lazy` and `Suspense` to reduce your initial bundle size. This is especially important for large applications where loading everything upfront can significantly impact your Time to Interactive (TTI) metrics.",
-              "Monitor your application's performance using Chrome DevTools and React DevTools Profiler. Identify bottlenecks and optimize them systematically. Remember: measure first, then optimize based on real data, not assumptions.",
+              "During the third week of my internship, I was assigned various administrative and field-related tasks. I assisted in delivering and receiving documents across different sections, ensuring proper coordination and timely submission. I also helped in printing and organizing files, as well as editing and updating some Personal Data Sheet (PDS) documents to maintain accurate employee records.",
+              "In addition, I participated in Lakbay Alalay, where we conducted road inspections to assess their condition. We checked for areas that required repair or possible demolition, which gave me practical exposure to fieldwork and a better understanding of the agency's role in maintaining public infrastructure. This experience helped me develop both my organizational and observational skills.",
             ],
-            codeBlock: {
-              language: "typescript",
-              code: `// Code splitting example
-import { lazy, Suspense } from 'react';
-
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Profile = lazy(() => import('./pages/Profile'));
-
-function App() {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Suspense>
-  );
-}`,
-            },
-          },
-          {
-            id: "friday",
-            heading: "Friday",
-            date: "December 12, 2025",
-            paragraphs: [
-              "Performance is crucial for user experience. Start by using React's built-in optimization tools like `React.memo`, `useMemo`, and `useCallback` to prevent unnecessary re-renders. However, remember that premature optimization can lead to more complex code without significant benefits.",
-              "Implement code splitting using `React.lazy` and `Suspense` to reduce your initial bundle size. This is especially important for large applications where loading everything upfront can significantly impact your Time to Interactive (TTI) metrics.",
-              "Monitor your application's performance using Chrome DevTools and React DevTools Profiler. Identify bottlenecks and optimize them systematically. Remember: measure first, then optimize based on real data, not assumptions.",
-            ],
-            codeBlock: {
-              language: "typescript",
-              code: `// Code splitting example
-import { lazy, Suspense } from 'react';
-
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Profile = lazy(() => import('./pages/Profile'));
-
-function App() {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Suspense>
-  );
-}`,
-            },
+            image: "/754b30e2-1a3a-42fb-891c-79999db260d6.jfif",
+            imageAlt: "Third week internship photo",
           },
           {
             id: "testing-strategies",
             heading: "Summary",
             paragraphs: [
-              "A scalable application needs a solid testing strategy. Implement a testing pyramid: lots of unit tests, some integration tests, and a few end-to-end tests. Use `Jest` and `React Testing Library` for unit and integration tests, and tools like `Playwright` or `Cypress` for E2E testing.",
-              "Focus on testing user behavior rather than implementation details. Your tests should verify that your application works correctly from the user's perspective, not that it uses specific internal methods or state structures.",
+              "Overall, my first month of internship was a valuable learning experience that allowed me to gradually adjust to a professional work environment. I started with basic administrative tasks such as handling documents, organizing files, and assisting with employee records, which helped me develop my attention to detail and familiarity with office procedures.",
+              "As the weeks progressed, I became more comfortable with my responsibilities and improved my skills in using tools like Microsoft Excel and document processing. I also gained exposure to both office-based and fieldwork activities, including participating in road inspections through Lakbay Alalay, which gave me a better understanding of the agency's role in public service.",
+              "Additionally, the experience of joining office events and preparations, such as the Christmas party, helped me build good relationships with the staff and enhanced my communication and teamwork skills. Overall, this month served as a strong foundation for my internship, preparing me for more complex tasks and responsibilities in the following months.",
             ],
           },
+        ],
+        keyTakeaways: [
+          "Gained understanding of office workflow and professional work environment",
+          "Developed basic skills in Microsoft Excel and document processing",
+          "Improved accuracy and attention to detail when handling employee records (PDS)",
+          "Learned proper document handling, filing, and inter-department coordination",
+          "Experienced both administrative and fieldwork tasks",
+          "Participated in road inspection (Lakbay Alalay) and understood its real-world application",
+          "Enhanced communication and teamwork skills through daily interactions and office activities",
+          "Built confidence in performing assigned tasks independently",
+          "Adapted to workplace culture and developed professionalism",
+          "Established a strong foundation for more advanced tasks in the succeeding months",
+        ],
+        tags: [
+          "Internship",
+          "OJT",
+          "DPWH",
+          "SystemDevelopment",
+          "QualityAssurance",
+          "DocumentProcessing",
+          "MicrosoftExcel",
+          "DataEncoding",
+          "FieldWork",
+          "LakbayAlalay",
+          "OfficeWork",
+          "ProfessionalExperience",
+          "WorkplaceLearning",
+          "PublicService",
+          "InternLife",
         ],
       },
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=800&fit=crop",
-      category: "Tutorial",
-      title: "Mastering TypeScript: Advanced Types and Patterns",
+      image: "/b1b65e38-ded2-4653-8679-93fd54504304.jfif",
+      category: "Collaboration",
+      title: "2nd Month of Internship",
       excerpt:
         "Dive deep into TypeScript's advanced type system and learn how to leverage it for better code quality and developer experience.",
-      date: "Dec 5, 2024",
+      date: "January 2026",
       readTime: "10 min read",
       author: {
-        name: "Your Name",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-        bio: "Full-stack developer and tech blogger with 5+ years of experience.",
+        name: "Art Jade T. Israel",
+        avatar: "/IMG_8554.jpg",
+        bio: "BSIT Student | Creative Thinker | Aspiring IT Professional | Intern at DPWH",
       },
       content: {
         sections: [
           {
             id: "introduction",
-            heading: "Why Advanced TypeScript Matters",
+            heading: "Introduction",
             paragraphs: [
-              "TypeScript has become an essential tool in modern web development, but many developers only scratch the surface of its capabilities. Understanding advanced TypeScript patterns can dramatically improve your code quality, catch bugs before they reach production, and enhance your development experience.",
-              "In this guide, we'll explore powerful TypeScript features like `conditional types`, `mapped types`, and `template literal types` that will take your type safety to the next level.",
+              "During the second month of my internship, I was assigned to more structured administrative and technical support tasks within the office. I assisted in organizing and delivering Personal Data Sheet (PDS) documents to different sections, ensuring that all records were properly handled and submitted. I also helped in securing required signatures and updating employee records to maintain accurate and up-to-date documentation.",
+              "In addition, I participated in discussions related to the SPMS (Strategic Performance Management System), where I gained insights into how employee performance is planned, monitored, and evaluated within the organization. I was also exposed to basic networking tasks in the Quality Assurance Office, where I observed system setups and assisted in troubleshooting a defective computer unit.",
+              "Furthermore, I contributed to the submission and processing of our Internship Memorandum of Agreement (MOA), ensuring that necessary requirements were properly completed and submitted. This month provided me with a deeper understanding of both administrative processes and basic technical support within the workplace.",
             ],
           },
           {
             id: "utility-types",
-            heading: "Leveraging Utility Types",
+            heading: "1st Week",
+            date: "January 5-9, 2026",
             paragraphs: [
-              "TypeScript provides several built-in utility types that can save you time and make your code more maintainable. Types like `Partial<T>`, `Required<T>`, `Pick<T, K>`, and `Omit<T, K>` allow you to transform existing types in powerful ways.",
+              "During the first week of my second month of internship, I was assigned to various administrative and technical support tasks. I assisted in organizing Personal Data Sheet (PDS) documents and delivered them to different section offices to ensure proper distribution and processing. I also helped in securing signatures for important documents and ensuring their completeness.",
+              "In addition, I assisted in basic networking tasks within the office and helped troubleshoot and fix defective computer units. I also updated some PDS information to ensure accuracy of employee records. Furthermore, I was tasked with cutting and preparing documents for proper filing and distribution. This week helped me further develop my organizational skills and basic technical troubleshooting abilities.",
             ],
-            codeBlock: {
-              language: "typescript",
-              code: `interface User {
-  id: string;
-  name: string;
-  email: string;
-  age: number;
-}
-
-// Make all properties optional
-type PartialUser = Partial<User>;
-
-// Pick specific properties
-type UserPreview = Pick<User, 'id' | 'name'>;
-
-// Omit specific properties
-type UserWithoutAge = Omit<User, 'age'>;
-
-// Make all properties required
-type RequiredUser = Required<Partial<User>>;`,
-            },
+            image: "/ad49c15e-a0c5-482a-abc5-4b60f99da5ec.jfif",
+            imageAlt: "Second month first week internship photo",
           },
+          {
+            id: "second-week",
+            heading: "2nd Week",
+            date: "January 12-15, 2026",
+            paragraphs: [
+              "During the second week of my internship, we went to a law firm to have our Memorandum of Agreement (MOA) notarized as part of the required internship documentation process. This ensured that all formal agreements were properly validated and legally acknowledged.",
+              "In addition, I assisted in submitting various documents to different officers within the office, ensuring proper routing and completeness of requirements. I also helped in forwarding Personal Data Sheet (PDS) documents to the Human Resource (HR) and Bids and Awards Committee (BAC) offices for further processing and record-keeping. This week enhanced my understanding of official document handling and inter-office coordination.",
+            ],
+            image: "/b3e9fb4b-cc5c-4865-89b9-1f5225522250.jfif",
+            imageAlt: "Second month second week internship photo",
+          },
+          {
+            id: "third-week",
+            heading: "3rd Week",
+            date: "January 20-23, 2026",
+            paragraphs: [
+              "During the third week of my internship, the workload was relatively light, allowing more focus on planning and preparation for our system development project. I was involved in designing the user interface using Figma, which helped establish the initial layout and structure of the system we will be developing.",
+              "I also participated in discussions with my team regarding the system's features, flow, and overall design to ensure that everyone was aligned with the project goals. These collaborative meetings helped us organize our ideas and plan the development process more effectively.",
+              "In addition, after attending our assembly meeting at school, we proceeded directly to the DPWH office to continue our internship duties. This week helped strengthen my teamwork, planning, and UI design skills in preparation for the upcoming development phase.",
+            ],
+            image: "/cc4806db-5065-4e0c-8019-15f35734bcd6.jfif",
+            imageAlt: "Second month third week internship photo",
+          },
+          {
+            id: "fourth-week",
+            heading: "4th Week",
+            date: "January 26-30, 2026",
+            paragraphs: [
+              "During the fourth week of my internship, I participated in the weekly flag raising ceremony, which is part of the office's regular activities and promotes discipline and unity among employees.",
+              "I was also assigned to forward several documents to different section offices, ensuring proper distribution and coordination. In addition, I assisted in sorting documents from the Maintenance Office, organizing them for proper filing and record-keeping.",
+              "Furthermore, I worked on our capstone manuscript by submitting it for international publication consideration and revising it for final submission. This involved reviewing content, making necessary corrections, and ensuring that the document met the required standards. This week helped me improve my organizational skills, attention to detail, and academic writing responsibility.",
+            ],
+            image: "/b1b65e38-ded2-4653-8679-93fd54504304.jfif",
+            imageAlt: "Second month fourth week internship photo",
+          },
+          {
+            id: "second-month-summary",
+            heading: "Summary",
+            paragraphs: [
+              "Overall, my second month of internship provided a balanced experience of administrative work, technical exposure, and academic-related tasks. I continued assisting in organizing and processing documents such as PDS forms, including forwarding them to different offices like HR and BAC, which improved my understanding of proper document flow and office coordination.",
+              "I also gained exposure to technical tasks such as basic networking and troubleshooting defective computers, which helped enhance my problem-solving skills in a real office environment. Additionally, I participated in discussions related to the SPMS system, which gave me insight into performance monitoring and planning processes within the organization.",
+              "This month also involved important external activities such as the notarization of our MOA and submission of official internship requirements. Alongside these, I contributed to our capstone project by designing the system interface using Figma, collaborating with my team, and revising our manuscript for publication.",
+              "Overall, this month strengthened my organizational skills, teamwork, technical awareness, and ability to balance both internship duties and academic requirements.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Improved understanding of official document processing and workflow between different offices (HR, BAC, and other sections)",
+          "Gained experience in handling, organizing, and forwarding important documents such as PDS",
+          "Developed awareness of proper documentation procedures, including notarization of the MOA",
+          "Enhanced basic technical skills through exposure to networking tasks and computer troubleshooting",
+          "Learned the importance of accuracy and organization in updating and sorting records",
+          "Participated in SPMS discussions and gained insight into performance management systems",
+          "Strengthened teamwork and communication through system planning and capstone discussions",
+          "Developed UI design skills using Figma for system development",
+          "Improved academic writing and revision skills through capstone manuscript preparation",
+          "Learned to balance internship responsibilities with school requirements and deadlines",
+        ],
+        tags: [
+          "Internship",
+          "OJT",
+          "DPWH",
+          "SystemDevelopment",
+          "UIUXDesign",
+          "FigmaDesign",
+          "QualityAssurance",
+          "DocumentProcessing",
+          "OfficeWork",
+          "NetworkingBasics",
+          "SPMS",
+          "CapstoneProject",
+          "ResearchPublication",
+          "Teamwork",
+          "ProfessionalExperience",
+          "PublicService",
+          "WorkplaceLearning",
+          "TechnicalSupport",
+          "ProjectManagement",
         ],
       },
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop",
-      category: "Career",
-      title: "From Junior to Senior Developer: My Journey",
+      image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jfif",
+      category: "Development",
+      title: "3rd Month of Internship",
       excerpt:
         "Reflections on my growth as a software developer and the key lessons learned along the way to becoming a senior developer.",
-      date: "Nov 28, 2024",
+      date: "Febaruary 2026",
       readTime: "6 min read",
       author: {
-        name: "Your Name",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-        bio: "Full-stack developer and tech blogger with 5+ years of experience.",
+        name: "Art Jade T. Israel",
+        avatar: "/IMG_8554.jpg",
+        bio: "BSIT Student | Creative Thinker | Aspiring IT Professional | Intern at DPWH",
       },
       content: {
         sections: [
           {
             id: "introduction",
-            heading: "The Beginning of My Journey",
+            heading: "Introduction",
             paragraphs: [
-              "Five years ago, I started my career as a junior developer, filled with excitement and, honestly, a bit of imposter syndrome. Looking back now, I can see how much I've grown, not just in technical skills, but in understanding what it truly means to be a senior developer.",
-              "This isn't just about writing better code or knowing more frameworks. It's about `mentorship`, `architectural decisions`, and `strategic thinking` that goes beyond the keyboard.",
+              "During the third month of my internship, I was assigned to various administrative, technical, and system development-related tasks. I assisted in forwarding, submitting, and filing important documents to ensure proper documentation flow and office coordination. I also helped in organizing and encoding records, which improved the accuracy and efficiency of data management within the office.",
+              "In addition, I participated in the presentation and development updates of the system we were working on, contributing ideas and progress reports with my team. I also gained hands-on experience in basic computer and printer troubleshooting, which helped improve my technical problem-solving skills.",
+              "Furthermore, I was involved in supporting the school's promotional campaign activities, which allowed me to experience tasks beyond technical work and contribute to outreach efforts. Overall, this month enhanced my technical abilities, organizational skills, and teamwork experience.",
             ],
           },
           {
             id: "technical-growth",
-            heading: "Technical Skills Are Just the Beginning",
+            heading: "1st Week",
+            date: "February 2-6, 2026",
             paragraphs: [
-              "As a junior developer, I was obsessed with learning every new technology and framework. I wanted to be the person who knew it all. But I quickly learned that being a senior developer isn't about knowing everything—it's about knowing how to learn and when to apply the right tool for the job.",
-              "Focus on mastering fundamentals: `data structures`, `algorithms`, `design patterns`, and `system design`. These skills are transferable across languages and frameworks, making you a more versatile and valuable developer.",
+              "During the first week of my third month of internship, I participated in the weekly flag raising ceremony, which is part of the office's regular activities. We also went to the BAC Office to assist in fixing a laptop, which gave me additional exposure to basic computer troubleshooting and maintenance.",
+              "I consulted with our handler to gather necessary information needed for the development of the IPCR System that our team is working on. This helped us better understand the system requirements and expected outputs.",
+              "In addition, I assisted in troubleshooting a printer at the Admin Office, ensuring it was functioning properly for office use. I also helped in delivering documents to different offices, which improved my understanding of proper document flow and coordination within the organization.",
             ],
+            image: "/b43335fd-3f02-40b3-8c51-661000b3609a.jfif",
+            imageAlt: "Third month first week internship photo",
           },
           {
             id: "soft-skills",
-            heading: "The Importance of Soft Skills",
+            heading: "2nd Week",
+            date: "February 9-12, 2026",
             paragraphs: [
-              "The biggest surprise in my journey was discovering how crucial soft skills are for career advancement. Communication, collaboration, and empathy became just as important as my coding abilities.",
-              "Learn to write clear documentation, give constructive code reviews, and communicate technical concepts to non-technical stakeholders. These skills will set you apart and open doors to leadership opportunities.",
+              "During the second week of my third month of internship, I was assigned to several administrative and technical tasks. I assisted in submitting documents to the Admin Office, ensuring that all requirements were properly endorsed and forwarded.",
+              "I also helped in updating documents by writing and completing required dates to ensure accuracy and completeness of records. In addition, I was assigned to assist at the COA Office where I replaced an RJ45 network cable. This task required me to climb to the roof to properly install and secure the internet connection, giving me hands-on experience in basic networking and hardware installation.",
+              "Overall, this week enhanced my attention to detail, responsibility in handling official documents, and practical skills in technical troubleshooting.",
+            ],
+            image: "/175c711a-72ab-4ecb-b4ce-44af71d0a083.jfif",
+            imageAlt: "Third month second week internship photo",
+          },
+          {
+            id: "third-week",
+            heading: "3rd Week",
+            date: "February 16-19, 2026",
+            paragraphs: [
+              "During the third week of my internship, I participated in a school campaign promoting our department, the College of Computer Studies (CCS). This activity allowed me to engage with students and help raise awareness about our department and its programs.",
+              "In addition, I was assigned to assist in fixing a computer at the Maintenance Office. I performed basic troubleshooting to identify and resolve issues affecting the system's performance. This experience further developed my technical skills in diagnosing and addressing common computer problems.",
+              "Overall, this week helped improve my communication skills through the promotional activity and strengthened my practical knowledge in computer troubleshooting.",
+            ],
+            image: "/cfa94498-19e5-4e21-8b3d-646835f850df.jfif",
+            imageAlt: "Third month third week internship photo",
+          },
+          {
+            id: "fourth-week",
+            heading: "4th Week",
+            date: "February 23-27, 2026",
+            paragraphs: [
+              "During this week, I submitted the IPCR documents at the Admin Office and also delivered additional required documents to the Accounting Office, ensuring proper processing and endorsement.",
+              "In addition, I participated in the presentation of the system we are developing at the Planning Office for consultation. This allowed us to gather feedback and identify the necessary requirements and improvements needed for the system to better meet user needs.",
+              "Overall, these tasks helped me improve my coordination skills in document handling and enhanced my understanding of system development through stakeholder consultation.",
+            ],
+            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jfif",
+            imageAlt: "Third month fourth week internship photo",
+          },
+          {
+            id: "third-month-summary",
+            heading: "Summary",
+            paragraphs: [
+              "Overall, my third month of internship provided a combination of administrative work, technical tasks, and system development activities. I gained further experience in handling and submitting official documents, including forwarding them to different offices such as Admin, Accounting, and other departments, which strengthened my understanding of proper documentation flow and office coordination.",
+              "I also developed my technical skills through hands-on tasks such as troubleshooting computers and printers, replacing network cables (RJ45 installation), and assisting in resolving basic hardware and connectivity issues. These experiences improved my confidence in handling real-world IT concerns.",
+              "In addition, I actively participated in the development of our IPCR System by gathering requirements, consulting with our handler, and presenting the system to the Planning Office for feedback and improvement. I also joined school promotional activities for the College of Computer Studies, which helped enhance my communication and teamwork skills.",
+              "Overall, this month strengthened my technical abilities, communication skills, and understanding of both administrative processes and system development practices.",
             ],
           },
+        ],
+        keyTakeaways: [
+          "Strengthened skills in handling, submitting, and routing official documents across different offices (Admin, Accounting, Planning, etc.)",
+          "Improved accuracy in document processing by updating details such as required dates and ensuring completeness",
+          "Gained hands-on experience in computer and printer troubleshooting",
+          "Learned basic networking tasks, including RJ45 cable replacement and installation",
+          "Developed confidence in performing technical tasks, including working in challenging physical setups (e.g., roof installation work)",
+          "Enhanced understanding of system development through IPCR system requirement gathering and consultations",
+          "Improved communication and presentation skills during system presentations to the Planning Office",
+          "Participated in school promotional activities for CCS, strengthening teamwork and public engagement skills",
+          "Gained better awareness of how technical, administrative, and academic tasks are interconnected in a real workplace",
+        ],
+        tags: [
+          "Internship",
+          "OJT",
+          "DPWH",
+          "SystemDevelopment",
+          "IPCRSystem",
+          "DocumentProcessing",
+          "OfficeWork",
+          "DataEncoding",
+          "TechnicalSupport",
+          "ComputerTroubleshooting",
+          "PrinterTroubleshooting",
+          "NetworkingBasics",
+          "RJ45Installation",
+          "SystemPresentation",
+          "StakeholderConsultation",
+          "Teamwork",
+          "PublicService",
+          "CCS",
+          "SchoolCampaign",
+          "WorkplaceLearning",
+          "ProfessionalExperience",
+        ],
+      },
+    },
+    {
+      id: 4,
+      image: "/60ca191d-73e8-4761-99f7-aa8a1dac586d.jfif",
+      category: "Implementation",
+      title: "4th Month of Internship",
+      excerpt:
+        "A new chapter of internship experiences focused on continued growth, project work, and real-world office responsibilities.",
+      date: "March 2026",
+      readTime: "7 min read",
+      author: {
+        name: "Art Jade T. Israel",
+        avatar: "/IMG_8554.jpg",
+        bio: "BSIT Student | Creative Thinker | Aspiring IT Professional | Intern at DPWH",
+      },
+      content: {
+        sections: [
+          {
+            id: "introduction",
+            heading: "Introduction",
+            paragraphs: [
+              "During the fourth month of my internship, I focused on the development, finalization, and preparation of the system for implementation and turnover. This phase involved refining system features, ensuring functionality, and preparing all necessary outputs for submission.",
+              "I also continued assisting in various administrative tasks, particularly in handling and processing documents to support office operations. In addition, I actively collaborated with my team throughout the development process, contributing ideas and participating in discussions to improve the system.",
+              "As part of my role in System Quality Assurance, I was responsible for checking and evaluating the system to ensure that it meets the client's requirements and standards. This involved testing functionalities, identifying issues, and verifying improvements before final deployment. Overall, this month strengthened my technical, analytical, and teamwork skills as we prepared the system for final implementation.",
+            ],
+          },
+          {
+            id: "first-week",
+            heading: "1st Week",
+            date: "March 2026",
+            paragraphs: [
+              "During the first week of my fourth month of internship, we focused on the continued development and improvement of the system in preparation for final implementation. I assisted in refining system features and ensuring that the outputs aligned with the required specifications.",
+              "I also collaborated closely with my team in testing different parts of the system, identifying errors, and suggesting possible improvements to enhance its functionality and user experience. As part of my role in System Quality Assurance, I checked whether the system met the client's requirements and standards.",
+              "In addition, I continued assisting in document-related tasks when needed, supporting office operations while balancing system development responsibilities. This week helped me further strengthen my attention to detail, teamwork, and system evaluation skills.",
+            ],
+            image: "/1aab0a16-2d32-45cd-9035-03368f58d6b8.jfif",
+            imageAlt: "Fourth month first week internship photo",
+          },
+          {
+            id: "second-week",
+            heading: "2nd Week",
+            paragraphs: [
+              "During the second week of my fourth month of internship, I continued assisting in the final stages of system development. I was actively involved in testing and evaluating system functionalities to ensure that all features were working properly and aligned with the client's requirements.",
+              "I collaborated with my team in identifying bugs and system issues, as well as verifying corrections and improvements made by the developers. As part of my role in System Quality Assurance, I carefully checked the system's performance, usability, and accuracy to ensure its readiness for implementation.",
+              "In addition, I assisted with minor administrative tasks when needed, which helped maintain smooth office operations. This week further enhanced my analytical skills, attention to detail, and understanding of the importance of thorough system testing before deployment.",
+            ],
+            image: "/3bbdc503-aab6-4378-a526-60c86b864c98.jfif",
+            imageAlt: "Fourth month second week internship photo",
+          },
+          {
+            id: "third-week",
+            heading: "3rd Week",
+            date: "March 2026",
+            paragraphs: [
+              "During the third week of my fourth month of internship, we focused on the finalization of the system we developed in preparation for turnover and implementation. This stage involved completing the remaining features, refining system functions, and ensuring overall stability and readiness.",
+              "As part of my role in System Quality Assurance, I conducted final testing to verify that all system requirements were properly met. I checked for errors, inconsistencies, and usability issues, and ensured that necessary corrections were applied by the development team.",
+              "I also collaborated closely with my teammates during final reviews and system evaluations to ensure that the output aligned with the client's expectations. This week strengthened my attention to detail, critical thinking, and understanding of the importance of thorough quality assurance before system deployment.",
+            ],
+            image: "/1528af83-1fec-4824-ac63-47cce6677242.jfif",
+            imageAlt: "Fourth month third week internship photo",
+          },
+          {
+            id: "fourth-week",
+            heading: "4th Week",
+            paragraphs: [
+              "During the last week of my internship, we focused on the final preparations for the system turnover and presentation. This included completing all remaining requirements, ensuring that the system was fully functional, and making final adjustments based on last checks and evaluations.",
+              "As part of the preparation, I collaborated with my team in reviewing the system to ensure that all features were properly working and aligned with the client's requirements. I also participated in rehearsals and preparations for the turnover presentation, which aimed to demonstrate the system's functionality and overall output.",
+              "In addition, this week marked the completion of my On-the-Job Training (OJT). It was a meaningful experience that allowed me to apply the knowledge and skills I gained throughout the internship. Overall, this final week strengthened my confidence, teamwork, and understanding of system development from planning to deployment.",
+            ],
+            image: "/ce45f2eb-54e0-449a-bc91-c42194193d22.jfif",
+            imageAlt: "Fourth month fourth week internship photo",
+          },
+        ],
+        keyTakeaways: [
+          "Gained full experience in the system development lifecycle from development to final turnover",
+          "Strengthened skills in System Quality Assurance through continuous testing and evaluation",
+          "Improved ability to identify bugs, inconsistencies, and usability issues before system deployment",
+          "Learned the importance of thorough system finalization and preparation prior to implementation",
+          "Enhanced teamwork and collaboration during final development and presentation stages",
+          "Developed confidence in participating in system turnover presentations and discussions",
+          "Applied technical, analytical, and problem-solving skills in real project scenarios",
+          "Gained a deeper understanding of client requirement validation and system compliance",
+          "Built professional discipline through completion of OJT responsibilities and deadlines",
+          "Strengthened overall readiness for real-world IT and system development work",
+        ],
+        tags: [
+          "Internship",
+          "OJT",
+          "DPWH",
+          "SystemDevelopment",
+          "SystemTurnover",
+          "SystemFinalization",
+          "QualityAssurance",
+          "SoftwareTesting",
+          "BugTesting",
+          "UserAcceptanceTesting",
+          "ProjectCompletion",
+          "Teamwork",
+          "Collaboration",
+          "TechnicalExperience",
+          "ITIntern",
+          "CapstoneProject",
+          "Presentation",
+          "WorkplaceLearning",
+          "ProfessionalExperience",
+          "CareerReadiness",
         ],
       },
     },

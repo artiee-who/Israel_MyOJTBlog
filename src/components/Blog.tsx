@@ -8,33 +8,43 @@ export function Blog({ onPostClick }: BlogProps) {
   const blogPosts = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=800&h=600&fit=crop",
+      image: `${import.meta.env.BASE_URL}cc4806db-5065-4e0c-8019-15f35734bcd6.jfif`,
       category: "Web Development",
-      title: "1st Week of Internship",
+      title: "1st Month of Internship",
       excerpt:
-        "Learn the best practices and patterns for creating maintainable and scalable React applications with modern tools and techniques.",
-      date: "Dec. 09-12, 2025",
+        "My first month of internship focused on adjusting to the workplace, learning office procedures, and gaining hands-on experience in documentation and daily tasks.",
+      date: "December 2025",
       readTime: "8 min read",
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-      category: "Tutorial",
-      title: "2nd Week of Internship",
+      image: `${import.meta.env.BASE_URL}b1b65e38-ded2-4653-8679-93fd54504304.jfif`,
+      category: "Collaboration",
+      title: "2nd Month of Internship",
       excerpt:
-        "Dive deep into TypeScript's advanced type system and learn how to leverage it for better code quality and developer experience.",
-      date: "Dec. 15-19, 2025",
+        "My second month of internship involved document processing, technical support tasks, teamwork, and deeper involvement in system planning and development.",
+      date: "January 2026",
       readTime: "10 min read",
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
-      category: "Career",
-      title: "3rd Week of Internship",
+      image: `${import.meta.env.BASE_URL}b43335fd-3f02-40b3-8c51-661000b3609a.jfif`,
+      category: "Development",
+      title: "3rd Month of Internship",
       excerpt:
-        "Reflections on my growth as a software developer and the key lessons learned along the way to becoming a senior developer.",
-      date: "Dec. 22-26, 2025",
+        "My third month of internship strengthened my experience in system development, troubleshooting, office coordination, and stakeholder collaboration.",
+      date: "Febaruary 2026",
       readTime: "6 min read",
+    },
+    {
+      id: 4,
+      image: `${import.meta.env.BASE_URL}60ca191d-73e8-4761-99f7-aa8a1dac586d.jfif`,
+      category: "Implementation",
+      title: "4th Month of Internship",
+      excerpt:
+        "My fourth month of internship centered on system finalization, quality assurance, turnover preparation, and completing my OJT responsibilities.",
+      date: "March 2026",
+      readTime: "7 min read",
     },
   ];
 
@@ -48,7 +58,7 @@ export function Blog({ onPostClick }: BlogProps) {
           <div className="w-20 h-1 bg-[#B5E3FF] mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {blogPosts.map((post) => (
             <article
               key={post.id}
