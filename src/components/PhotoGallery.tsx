@@ -4,162 +4,88 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 export function PhotoGallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const photos = [
-    {
-      url: `${import.meta.env.BASE_URL}photo1.jpg`,
-      title: "Gallery Photo 1",
-      category: "Memories",
-    },
-    {
-      url: `${import.meta.env.BASE_URL}photo2.jpg`,
-      title: "Gallery Photo 2",
-      category: "Memories",
-    },
-    {
-      url: `${import.meta.env.BASE_URL}photo3.jpg`,
-      title: "Gallery Photo 3",
-      category: "Memories",
-    },
-    {
-      url: `${import.meta.env.BASE_URL}photo4.jpg`,
-      title: "Gallery Photo 4",
-      category: "Memories",
-    },
-    {
-      url: `${import.meta.env.BASE_URL}photo5.jpg`,
-      title: "Gallery Photo 5",
-      category: "Memories",
-    },
-    {
-      url: `${import.meta.env.BASE_URL}photo6.jpg`,
-      title: "Gallery Photo 6",
-      category: "Memories",
-    },
-  ];
-
-  const openLightbox = (index: number) => {
-    setSelectedImage(index);
-    document.body.style.overflow = "hidden";
-  };
+  const photos = ["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg", "photo5.jpg", "photo6.jpg"].map(
+    (file, index) => ({
+      url: `${import.meta.env.BASE_URL}${file}`,
+      title: `Internship memory ${index + 1}`,
+      category: index < 3 ? "Campus" : "OJT",
+    })
+  );
 
   const closeLightbox = () => {
     setSelectedImage(null);
     document.body.style.overflow = "auto";
   };
 
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
+    document.body.style.overflow = "hidden";
+  };
+
   const goToPrevious = () => {
     if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === 0 ? photos.length - 1 : selectedImage - 1
-      );
+      setSelectedImage(selectedImage === 0 ? photos.length - 1 : selectedImage - 1);
     }
   };
 
   const goToNext = () => {
     if (selectedImage !== null) {
-      setSelectedImage(
-        selectedImage === photos.length - 1 ? 0 : selectedImage + 1
-      );
+      setSelectedImage(selectedImage === photos.length - 1 ? 0 : selectedImage + 1);
     }
   };
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 text-[#F3F4F7]">
-            Photo <span className="text-[#B5E3FF]">Gallery</span>
-          </h2>
-          <div className="w-20 h-1 bg-[#B5E3FF] mx-auto rounded-full"></div>
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              onClick={() => openLightbox(index)}
-              className="relative group cursor-pointer overflow-hidden rounded-lg border border-[#C7CCD9]/20 hover:border-[#B5E3FF]/50 transition-all duration-300"
-            >
-              <img
-                src={photo.url}
-                alt={photo.title}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D12]/90 via-[#0D0D12]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                <h3 className="text-[#F3F4F7]">{photo.title}</h3>
-                <p className="text-[#B5E3FF] text-sm">{photo.category}</p>
-              </div>
-              {/* Blue glow on hover */}
-              <div className="absolute inset-0 shadow-lg shadow-[#B5E3FF]/0 group-hover:shadow-[#B5E3FF]/30 transition-shadow duration-300 pointer-events-none"></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Lightbox Modal */}
-        {selectedImage !== null && (
-          <div
-            className="fixed inset-0 z-50 bg-[#0D0D12]/95 flex items-center justify-center p-4"
-            onClick={closeLightbox}
-          >
-            {/* Close Button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors z-10"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Previous Button */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                goToPrevious();
-              }}
-              className="absolute left-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors"
-            >
-              <ChevronLeft size={24} />
-            </button>
-
-            {/* Next Button */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                goToNext();
-              }}
-              className="absolute right-4 w-10 h-10 bg-[#1A1F35] hover:bg-[#B5E3FF]/20 rounded-full flex items-center justify-center text-[#C7CCD9] hover:text-[#B5E3FF] transition-colors"
-            >
-              <ChevronRight size={24} />
-            </button>
-
-            {/* Image */}
-            <div
-              onClick={(e) => e.stopPropagation()}
-              className="max-w-5xl w-full"
-            >
-              <img
-                src={photos[selectedImage].url}
-                alt={photos[selectedImage].title}
-                className="w-full h-auto max-h-[80vh] object-contain rounded-lg border border-[#C7CCD9]/20"
-              />
-              <div className="mt-4 text-center">
-                <h3 className="text-[#F3F4F7] text-xl mb-1">
-                  {photos[selectedImage].title}
-                </h3>
-                <p className="text-[#B5E3FF]">
-                  {photos[selectedImage].category}
-                </p>
-              </div>
-            </div>
-
-            {/* Counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[#C7CCD9] text-sm">
-              {selectedImage + 1} / {photos.length}
-            </div>
-          </div>
-        )}
+    <section id="gallery" className="section section-ink">
+      <div className="section-heading section-heading-wide">
+        <span>Photo Notes</span>
+        <h2>A visual journal of people, places, and moments around the work.</h2>
       </div>
+
+      <div className="photo-wall">
+        {photos.map((photo, index) => (
+          <button
+            key={photo.url}
+            onClick={() => openLightbox(index)}
+            className={`photo-tile photo-tile-${index + 1}`}
+          >
+            <img src={photo.url} alt={photo.title} />
+            <span>{photo.category}</span>
+          </button>
+        ))}
+      </div>
+
+      {selectedImage !== null && (
+        <div className="lightbox" onClick={closeLightbox}>
+          <button className="lightbox__close" onClick={closeLightbox} aria-label="Close image">
+            <X size={24} />
+          </button>
+          <button
+            className="lightbox__prev"
+            onClick={(event) => {
+              event.stopPropagation();
+              goToPrevious();
+            }}
+            aria-label="Previous image"
+          >
+            <ChevronLeft size={26} />
+          </button>
+          <img
+            onClick={(event) => event.stopPropagation()}
+            src={photos[selectedImage].url}
+            alt={photos[selectedImage].title}
+          />
+          <button
+            className="lightbox__next"
+            onClick={(event) => {
+              event.stopPropagation();
+              goToNext();
+            }}
+            aria-label="Next image"
+          >
+            <ChevronRight size={26} />
+          </button>
+        </div>
+      )}
     </section>
   );
 }

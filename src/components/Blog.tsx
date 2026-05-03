@@ -8,115 +8,98 @@ export function Blog({ onPostClick }: BlogProps) {
   const blogPosts = [
     {
       id: 1,
-      image: `cc4806db-5065-4e0c-8019-15f35734bcd6.jpg`,
-      category: "Web Development",
+      image: "cc4806db-5065-4e0c-8019-15f35734bcd6.jpg",
+      category: "Adjustment",
       title: "1st Month of Internship",
       excerpt:
-        "My first month of internship focused on adjusting to the workplace, learning office procedures, and gaining hands-on experience in documentation and daily tasks.",
+        "Adjusting to the workplace, learning office procedures, and building confidence through everyday documentation tasks.",
       date: "December 2025",
       readTime: "8 min read",
     },
     {
       id: 2,
-      image: `b1b65e38-ded2-4653-8679-93fd54504304.jpg`,
-      category: "Collaboration",
+      image: "b1b65e38-ded2-4653-8679-93fd54504304.jpg",
+      category: "Teamwork",
       title: "2nd Month of Internship",
       excerpt:
-        "My second month of internship involved document processing, technical support tasks, teamwork, and deeper involvement in system planning and development.",
+        "Getting deeper into document processing, technical support, collaboration, and system planning.",
       date: "January 2026",
       readTime: "10 min read",
     },
     {
       id: 3,
-      image: `b43335fd-3f02-40b3-8c51-661000b3609a.jpg`,
+      image: "b43335fd-3f02-40b3-8c51-661000b3609a.jpg",
       category: "Development",
       title: "3rd Month of Internship",
       excerpt:
-        "My third month of internship strengthened my experience in system development, troubleshooting, office coordination, and stakeholder collaboration.",
-      date: "Febaruary 2026",
+        "Strengthening system development, troubleshooting, office coordination, and stakeholder communication.",
+      date: "February 2026",
       readTime: "6 min read",
     },
     {
       id: 4,
-      image: `${import.meta.env.BASE_URL}60ca191d-73e8-4761-99f7-aa8a1dac586d.jpg`,
-      category: "Implementation",
+      image: "60ca191d-73e8-4761-99f7-aa8a1dac586d.jpg",
+      category: "Completion",
       title: "4th Month of Internship",
       excerpt:
-        "My fourth month of internship centered on system finalization, quality assurance, turnover preparation, and completing my OJT responsibilities.",
+        "Finalizing the system, checking quality, preparing turnover materials, and completing the OJT journey.",
       date: "March 2026",
       readTime: "7 min read",
     },
   ];
 
   return (
-    <section id="blog" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4 text-[#F3F4F7]">
-            Internship Blog <span className="text-[#B5E3FF]">Journey</span>
-          </h2>
-          <div className="w-20 h-1 bg-[#B5E3FF] mx-auto rounded-full"></div>
-        </div>
+    <section id="blog" className="section section-light">
+      <div className="section-heading section-heading-wide">
+        <span>Internship Entries</span>
+        <h2>A month-by-month field journal from student life to office life.</h2>
+      </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {blogPosts.map((post) => (
+      <div className="blog-layout">
+        <article className="blog-feature" onClick={() => onPostClick?.(blogPosts[0].id)}>
+          <img
+            src={`${import.meta.env.BASE_URL}${blogPosts[0].image}`}
+            alt={blogPosts[0].title}
+          />
+          <div>
+            <span>{blogPosts[0].category}</span>
+            <h3>{blogPosts[0].title}</h3>
+            <p>{blogPosts[0].excerpt}</p>
+            <button>
+              Start reading
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </article>
+
+        <div className="blog-list">
+          {blogPosts.slice(1).map((post) => (
             <article
               key={post.id}
               onClick={() => onPostClick?.(post.id)}
-              className="bg-[#1A1F35] rounded-lg border border-[#C7CCD9]/20 hover:border-[#B5E3FF]/50 transition-all duration-300 overflow-hidden group hover:shadow-lg hover:shadow-[#B5E3FF]/10 hover:-translate-y-1 cursor-pointer"
+              className="blog-card"
             >
-              {/* Thumbnail */}
-              <div className="relative overflow-hidden h-48">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-[#B5E3FF] text-[#0D0D12] text-xs rounded-full">
-                    {post.category}
+              <img
+                src={`${import.meta.env.BASE_URL}${post.image.replace(/^\//, "")}`}
+                alt={post.title}
+              />
+              <div>
+                <span>{post.category}</span>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <div className="card-meta">
+                  <span>
+                    <Calendar size={14} />
+                    {post.date}
+                  </span>
+                  <span>
+                    <Clock size={14} />
+                    {post.readTime}
                   </span>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6">
-                {/* Meta Info */}
-                <div className="flex items-center gap-4 mb-3 text-[#C7CCD9] text-sm">
-                  <div className="flex items-center gap-1">
-                    <Calendar size={14} />
-                    <span>{post.date}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock size={14} />
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-[#F3F4F7] text-lg mb-3 group-hover:text-[#B5E3FF] transition-colors">
-                  {post.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-[#C7CCD9] text-sm mb-4">{post.excerpt}</p>
-
-                {/* Read More Link */}
-                <button className="flex items-center gap-2 text-[#B5E3FF] hover:gap-3 transition-all text-sm">
-                  Read More
-                  <ArrowRight size={16} />
-                </button>
-              </div>
             </article>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-transparent border-2 border-[#B5E3FF] text-[#B5E3FF] rounded-lg hover:bg-[#B5E3FF]/10 transition-all duration-300">
-            View All Posts
-          </button>
         </div>
       </div>
     </section>

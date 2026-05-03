@@ -22,35 +22,37 @@ export default function App() {
 
   const handleBackToBlog = () => {
     setSelectedPostId(null);
-    // Scroll to blog section
     setTimeout(() => {
-      const blogSection = document.getElementById("blog");
-      if (blogSection) {
-        blogSection.scrollIntoView({ behavior: "smooth" });
-      }
+      document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
 
-  // Show blog post detail if a post is selected
   if (selectedPostId) {
     const post = getBlogPostById(selectedPostId);
     if (post) {
-      return <BlogPost post={post} onBack={handleBackToBlog} />;
+      return (
+        <BlogPost
+          post={post}
+          onBack={handleBackToBlog}
+          onNavigateToPost={handlePostClick}
+        />
+      );
     }
   }
 
-  // Show main portfolio page
   return (
-    <div className="min-h-screen bg-[#0D0D12]">
+    <div className="blog-site">
       <Navigation />
       <Hero />
-      <About />
-      <Resume />
-      <Timeline />
-      <Achievements />
-      <PhotoGallery />
-      <CertificateGallery />
-      <Blog onPostClick={handlePostClick} />
+      <main>
+        <About />
+        <Resume />
+        <Timeline />
+        <Achievements />
+        <PhotoGallery />
+        <CertificateGallery />
+        <Blog onPostClick={handlePostClick} />
+      </main>
       <Footer />
     </div>
   );
